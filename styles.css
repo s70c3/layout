@@ -29,24 +29,42 @@ p {
     color: #fff;
 }
 
+h0 {
+    font-size: 4rem;
+    color: #00d4a7;
+}
 
 .hero {
     background-color: #292F36;
 }
-.hero .container {
+
+.hor-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: row;
+    align-items: center;
     margin: auto;
+    justify-content: space-between;
+    width: 90%;
 }
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
-    .hero .container  {
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
-    }
-  }
+    .hor-container  {
+     flex-direction: column;
+     align-items: center;
+     margin: auto;
+   }
+ }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
 
 .developer-card {
     background-color: #2c2c2c;
@@ -105,8 +123,9 @@ ul li {
 }
 /* Текстовый блок */
 .intro-text {
-    max-width: 500px;
+    /* max-width: 500px; */
     text-align: left;
+    margin: 20px;
 }
 
 /* Стили для заголовков h1 */
@@ -197,17 +216,10 @@ span.highlighted {
     margin: 50px 0;
 }
 
-.about-section .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 .about-header {
     text-align: center;
     margin-bottom: 30px;
-}
-
-.about-header h1 {
     display: inline-block;
     padding: 10px 40px;
     background-color: transparent;
@@ -273,7 +285,7 @@ span.highlighted {
 
 .skills-section .container {
   
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     position: relative; /* Устанавливаем относительное позиционирование для контейнера */
     display: flex;
@@ -411,14 +423,6 @@ span.highlighted {
     /* font-family: 'Courier New', Courier, monospace; */
 }
 
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-}
 
 /* Логотип выравнен по левому краю */
 .logo {
@@ -593,11 +597,6 @@ span.highlighted {
     margin: auto;
 }
 
-.container {
-    max-width: 1200px;
-    width: 100%;
-}
-
 .blogs-header {
     text-align: center;
     margin-bottom: 50px;
@@ -669,11 +668,15 @@ article {
     color: #cdd3d7;
 }
 
-.article-meta .tag {
+.tags {
+    margin: 20px 20px;
+}
+.tag {
     background-color: gray;
     padding: 5px 10px;
     border-radius: 15px;
     color: #fff;
+
 }
 
 .blogs-footer {
@@ -817,12 +820,6 @@ footer {
     margin: auto;
 }
 
-.blog-post .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-}
 
 .blog-post .container .post-info strong {
     color:#fff;
